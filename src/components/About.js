@@ -4,7 +4,7 @@ const About = () => {
       <div className="about-me container">
         <div className="section-title">
           <h2>About</h2>
-          <p>Learn more about me</p>
+          <h1 className="fs-1 fw-bold">LEARN MORE ABOUT ME</h1>
         </div>
 
         <div className="row">
@@ -19,7 +19,9 @@ const About = () => {
                 <ul>
                   <li>
                     <i className="bi bi-chevron-right"></i> <strong>Website:</strong>{" "}
-                    <span>www.eyuels.netlify.com</span>
+                    <span>
+                      <a href="https://eyuel.onrender.com">https://eyuel.onrender.com</a>
+                    </span>
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i> <strong>Phone:</strong>
@@ -59,13 +61,19 @@ const About = () => {
             </p>
 
             <div className="mt-4">
-              <a href="path/to/your/pdf/file.pdf" download class="bg-dark download text-white p-3">
+              <a
+                href="./assets/EyuelBegashawResume.pdf"
+                download
+                target="_blank"
+                class="bg-dark download text-white p-3"
+              >
                 Download Resume
               </a>
             </div>
           </div>
         </div>
       </div>
+
       <div className="skills container">
         <div className="section-title">
           <h2>Skills</h2>

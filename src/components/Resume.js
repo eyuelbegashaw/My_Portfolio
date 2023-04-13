@@ -4,7 +4,7 @@ const Resume = () => {
       <div className="container">
         <div className="section-title">
           <h2>Resume</h2>
-          <p>Check My Resume</p>
+          <h1 className="fs-1 fw-bold">Check My Resume</h1>
         </div>
 
         <div className="row">

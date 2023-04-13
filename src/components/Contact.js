@@ -42,7 +42,7 @@ const Contact = () => {
       <div className="container">
         <div className="section-title">
           <h2>Contact</h2>
-          <p>Contact Me</p>
+          <h1 className="fs-1 fw-bold">Contact Me</h1>
         </div>
 
         <div className="row mt-2">
