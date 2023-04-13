@@ -78,11 +78,6 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
-h1 {
-  font-family: "Poppins";
-  text-transform: uppercase;
-}
-
 /*Header*/
 #header {
   transition: ease-in-out 0.3s;
@@ -1071,5 +1066,5 @@ section:not(#home) {
 
 .contact {
   width: 95%;
-  margin:auto;
+  margin: auto;
 }
