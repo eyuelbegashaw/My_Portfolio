@@ -1,6 +1,6 @@
 const Home = () => {
   return (
-    <section id="home" className="home section-show w-95">
+    <section id="home" className="home section-show">
       <div className="container d-flex justify-content-around">
         <div>
           <div>

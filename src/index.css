@@ -45,17 +45,6 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #fff;
   background-color: rgb(33, 37, 41);
-  position: relative;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 100vh;
-  z-index: -1;
 }
 
 p {

@@ -1,13 +1,13 @@
 const Portfolio = () => {
   return (
-    <section id="portfolio" className="mt-5 mx-1">
-      <div className="m-md-5 ">
+    <section id="portfolio" className="mt-5">
+      <div className="m-md-2">
         <div className="section-title">
           <h2>Portfolio</h2>
           <h1 className="fs-1 fw-bold">Some Of My Works</h1>
         </div>
 
-        <div id="portfolio-details" className="portfolio-details m">
+        <div id="portfolio-details" className="portfolio-details">
           <div className="container-fluid">
             <h2>Pharmacy Management System</h2>
             <div className="row photos">
