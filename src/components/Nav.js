@@ -141,7 +141,7 @@ const Nav = () => {
           </ul>
 
           <i
-            className="bi bi-list mobile-nav-toggle align-self-center me-3"
+            className="bi bi-list mobile-nav-toggle align-self-center me-5"
             onClick={handleMenuClick}
           ></i>
         </nav>

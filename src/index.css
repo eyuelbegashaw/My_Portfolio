@@ -45,6 +45,7 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #fff;
   background-color: rgb(33, 37, 41);
+  width: 100%;
 }
 
 p {
@@ -951,20 +952,10 @@ section:not(#home) {
   background: rgba(255, 255, 255, 0.08);
 }
 
-.contact .info-box i.bx {
-  font-size: 24px;
-  color: var(--theme);
-  border-radius: 50%;
-  padding: 14px;
-  float: left;
-  background: rgba(255, 255, 255, 0.1);
-}
-
 .contact .info-box h3 {
   font-size: 20px;
   color: rgba(255, 255, 255, 0.5);
   font-weight: 700;
-  margin: 10px 0 8px 68px;
 }
 
 .contact .info-box p {
@@ -972,7 +963,6 @@ section:not(#home) {
   color: #fff;
   line-height: 24px;
   font-size: 14px;
-  margin: 0 0 0 68px;
 }
 
 .contact .info-box .social-links {
@@ -994,7 +984,7 @@ section:not(#home) {
 }
 
 .contact .php-email-form {
-  padding: 30px;
+  padding: 15px;
   background: rgba(255, 255, 255, 0.08);
 }
 
@@ -1077,4 +1067,9 @@ section:not(#home) {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.contact {
+  width: 95%;
+  margin:auto;
 }

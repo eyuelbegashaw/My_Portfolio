@@ -47,15 +47,13 @@ const Contact = () => {
 
         <div className="row mt-2">
           <div className="col-md-6 mt-4 d-flex align-items-stretch">
-            <div className="info-box">
-              <i className="bx bx-envelope"></i>
+            <div className="info-box ">
               <h3>Email Me</h3>
               <p className="fs-6">eyuelbegashaw214@gmail.com</p>
             </div>
           </div>
           <div className="col-md-6 mt-4 d-flex align-items-stretch">
             <div className="info-box">
-              <i className="bx bx-phone-call"></i>
               <h3>Call Me</h3>
               <p className="fs-6">+251922002403</p>
             </div>
