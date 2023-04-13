@@ -134,7 +134,7 @@ const Nav = () => {
                   className="pe-1 pb-1 fs-6"
                   width="32"
                   onClick={e => handleNavClick(e, "#contact")}
-                />{" "}
+                />
                 Contact
               </a>
             </li>
