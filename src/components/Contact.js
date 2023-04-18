@@ -10,7 +10,6 @@ const Contact = () => {
   const handleClick = async () => {
     try {
       let content = `subject ${subject} <br/> message ${message}`;
-      console.log(content);
       if (email && subject && email) {
         setFlag("loading");
         const response = await fetch("https://formspree.io/f/mrgvobby", {

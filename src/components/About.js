@@ -12,7 +12,7 @@ const About = () => {
             <img src="./assets/img/me.jpg" className="img-fluid" alt="profile image" />
           </div>
           <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Website &amp; and Mobile Developer</h3>
+            <h3>Website &amp; Mobile Developer</h3>
             <p className="ps-1">Hi there👋</p>
             <div className="row">
               <div className="col-lg-6">
