@@ -11,16 +11,17 @@ const Resume = () => {
           <div className="col-lg-6">
             <h3 className="resume-title">Education</h3>
             <div className="resume-item">
-              <h4>B.S. in Electrical and Computer Engineering</h4>
+              <h4>B.Sc in Computer Engineering</h4>
               <h5>2018 - 2023</h5>
               <p>
                 <em>Addis Ababa Institute of Technology , Addis Ababa University</em>
               </p>
               <p>
-                Studying Computer Engineering at Addis Ababa University (AAU) has prepared me to
-                pursue a career in this constantly evolving and impactful field. With a strong
-                foundation in computer engineering, I am equipped to tackle real-world problems and
-                contribute to technological advancements, with a focus on programming.
+                My education in Computer Engineering at Addis Ababa University (AAU) has prepared me
+                for a career in this dynamic field. I'm particularly passionate about programming
+                and software development. AAU's rigorous curriculum has given me a strong foundation
+                to address real-world challenges and contribute to technological advancements, all
+                while focusing on my passion for coding
               </p>
             </div>
           </div>
@@ -54,15 +55,13 @@ const Resume = () => {
             </div>
 
             <div className="resume-item">
-              <h4>Freelance Web developer</h4>
-              <h5>Jan 2021 - present</h5>
+              <h4>Software developer , Minnovation </h4>
+              <h5>Apr 2023 - Aug 2023</h5>
               <p>
-                As a freelance web developer, I have developed websites for a variety of clients
-                with different needs and requirements. I have acquired clients through various
-                channels, including Upwork, social media job postings, and direct outreach. Each
-                project has allowed me to improve my ability to meet client needs efficiently and
-                effectively. Through my freelance work, I have demonstrated my self-motivation and
-                adaptability, as well as my ability to work on multiple projects simultaneously.
+                Successfully executed and managed software projects independently. Designed,
+                developed, and implemented software applications from concept to completion. Ensured
+                high-quality deliverables through rigorous testing and debugging. Maintained a
+                self-driven approach, meeting project milestones and deadlines effectively.
               </p>
             </div>
           </div>
