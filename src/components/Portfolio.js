@@ -2,14 +2,85 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="mt-5">
       <div className="m-md-2">
-        <div className="section-title ms-2">
+        <div className="section-title ms-2  ms-5">
           <h2>Portfolio</h2>
           <h1 className="fs-1 fw-bold">Some Of My Works</h1>
         </div>
 
-        <div id="portfolio-details" className="portfolio-details">
-          <div className="container-fluid">
-            <h2>Pharmacy Management System</h2>
+        <div id="portfolio-details" className="portfolio-details mx-4">
+          <div className="container-fluid mt-5">
+            <h2>Ecommerce Website</h2>
+            <div className="row photos">
+              <div className="col-lg-7 portfolioItems">
+                <div
+                  id="carouselExampleControls"
+                  className="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div className="carousel-inner">
+                    <div className="carousel-item active">
+                      <div>
+                        <img
+                          src="./assets/img/portfolio/haset.jpg"
+                          className="d-block w-100"
+                          alt="first"
+                        />
+                      </div>
+                    </div>
+                    {Array.from({length: 3}, (_, i) => i + 2).map(data => (
+                      <div className="carousel-item">
+                        <img
+                          src={`./assets/img/portfolio/haset${data}.jpg`}
+                          className="d-block w-100"
+                          alt="second"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  <button
+                    className="carousel-control-prev buttons"
+                    type="button"
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev"
+                  >
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    className="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next"
+                  >
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+
+              <div className="col-lg-5 portfolioItems">
+                <h5>Project information</h5>
+                <ul>
+                  <li>
+                    <strong>Project URL</strong> :{" "}
+                    <a href="https://hasetshop.com" target="_blank">
+                      https://hasetshop.com
+                    </a>
+                  </li>
+                </ul>
+
+                <p>
+                  This website offers a simple and user-friendly online shopping experience,
+                  allowing you to easily customize your orders by choosing colors, quantities, and
+                  sizes. When you pick a color from the dropdown menu, you'll see an image of the
+                  product in that color, making it easier to decide. Additionally, the website gives
+                  the admin complete control over the products and categories, making management and
+                  organization effortless.
+                </p>
+              </div>
+            </div>
+
+            <h2 className="mt-5">Pharmacy Management System</h2>
             <div className="row photos">
               <div className="col-lg-7 portfolioItems">
                 <div
@@ -62,7 +133,10 @@ const Portfolio = () => {
                 <h5>Project information</h5>
                 <ul>
                   <li>
-                    <strong>Client</strong>: Benet pharmacy
+                    <strong>Project URL</strong> :{" "}
+                    <a href="https://benetpharmacy.onrender.com" target="_blank">
+                      https://benetpharmacy.onrender.com
+                    </a>
                   </li>
                 </ul>
 
@@ -128,10 +202,6 @@ const Portfolio = () => {
               <div className="col-lg-5 portfolioItems">
                 <h5>Project information</h5>
                 <ul>
-                  <li>
-                    <strong>Client</strong>: Upwork employer
-                  </li>
-
                   <li>
                     <strong>Project URL</strong> :{" "}
                     <a href="https://fetena.netlify.app/" target="_blank">

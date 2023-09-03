@@ -43,17 +43,13 @@ const About = () => {
                     <i className="bi bi-chevron-right"></i> <strong>Email:</strong>
                     <span>eyuelbegashaw214@gmail.com</span>
                   </li>
-                  <li>
-                    <i className="bi bi-chevron-right"></i> <strong>Freelance:</strong>
-                    <span>Available</span>
-                  </li>
                 </ul>
               </div>
             </div>
             <p>
-              I am a senior computer engineering student at Addis Ababa University, with a strong
-              passion for programming. I am constantly seeking to expand my knowledge and skills in
-              the field, and I am always eager to take on new challenges that will help me grow as a
+              I am a computer engineer graduated from Addis Ababa University, with a strong passion
+              for programming. I am constantly seeking to expand my knowledge and skills in the
+              field, and I am always eager to take on new challenges that will help me grow as a
               developer. I have gained practical experience working on a variety of programming
               projects. In my free time, I love exploring new technologies, experimenting with code,
               and collaborating with other programmers. Ultimately, I hope to use my skills to
@@ -83,103 +79,146 @@ const About = () => {
           <div className="flex-fill">
             <div className="d-flex justify-content-around">
               <div className="logoBorder p-2">
-                <img
-                  src="./assets/img/icons/html.png"
-                  className="img-fluid"
-                  width="100"
-                  alt="html"
-                />
+                <div>
+                  <img
+                    src="./assets/img/icons/html.png"
+                    className="img-fluid"
+                    width="100"
+                    alt="html"
+                  />
+                </div>
+                <div className="text-center theme mt-1">HTML</div>
               </div>
               <div className="logoBorder p-2">
-                <img src="./assets/img/icons/css.png" className="img-fluid" width="100" alt="css" />
+                <div>
+                  <img
+                    src="./assets/img/icons/css.png"
+                    className="img-fluid"
+                    width="100"
+                    alt="css"
+                  />
+                </div>
+                <div className="text-center theme mt-1">CSS</div>
               </div>
               <div className="logoBorder p-2">
-                <img
-                  src="./assets/img/icons/js.png"
-                  className="img-fluid"
-                  width="100"
-                  alt="javascript"
-                />
+                <div>
+                  <img
+                    src="./assets/img/icons/js.png"
+                    className="img-fluid"
+                    width="100"
+                    alt="javascript"
+                  />
+                </div>
+                <div className="text-center theme mt-1">JavaScript</div>
               </div>
             </div>
             <div className="d-flex justify-content-around w-100 mt-3">
               <div className="logoBorder p-2">
-                <img
-                  src="./assets/img/icons/bootstrap.png"
-                  width="100"
-                  className="img-fluid"
-                  alt="bootstrap"
-                />
+                <div>
+                  <img
+                    src="./assets/img/icons/bootstrap.png"
+                    width="100"
+                    className="img-fluid"
+                    alt="bootstrap"
+                  />
+                </div>
+                <div className="text-center theme mt-1">Bootstrap</div>
               </div>
               <div className="logoBorder p-2">
-                <img
-                  src="./assets/img/icons/react.png"
-                  width="100"
-                  className="img-fluid"
-                  alt="react"
-                />
+                <div>
+                  <img
+                    src="./assets/img/icons/react.png"
+                    width="100"
+                    className="img-fluid"
+                    alt="react"
+                  />
+                </div>
+                <div className="text-center theme mt-1">React</div>
               </div>
               <div className="logoBorder p-2">
-                <img
-                  src="./assets/img/icons/redux.png"
-                  width="100"
-                  className="img-fluid"
-                  alt="redux"
-                />
+                <div>
+                  <img
+                    src="./assets/img/icons/redux.png"
+                    width="100"
+                    className="img-fluid"
+                    alt="redux"
+                  />
+                </div>
+                <div className="text-center theme mt-1">Redux</div>
               </div>
             </div>
           </div>
           <div className="flex-fill">
             <div className="d-flex justify-content-around">
               <div className="logoBorder p-2">
-                <img
-                  src="./assets/img/icons/nodejs.png"
-                  className="img-fluid"
-                  width="100"
-                  alt="html"
-                />
+                <div>
+                  <img
+                    src="./assets/img/icons/nodejs.png"
+                    className="img-fluid"
+                    width="100"
+                    alt="html"
+                  />
+                </div>
+                <div className="text-center theme mt-1">Nodejs</div>
               </div>
               <div className="logoBorder p-2">
-                <img
-                  src="./assets/img/icons/express.png"
-                  className="img-fluid"
-                  width="100"
-                  alt="css"
-                />
+                <div>
+                  <img
+                    src="./assets/img/icons/express.png"
+                    className="img-fluid"
+                    width="100"
+                    alt="css"
+                  />
+                </div>
+                <div className="text-center theme mt-1">Express</div>
               </div>
               <div className="logoBorder p-2">
-                <img
-                  src="./assets/img/icons/mongodb.png"
-                  className="img-fluid"
-                  width="100"
-                  alt="javascript"
-                />
+                <div>
+                  <img
+                    src="./assets/img/icons/mongodb.png"
+                    className="img-fluid"
+                    width="100"
+                    alt="javascript"
+                  />
+                </div>
+                <div className="text-center theme mt-1">Mongodb</div>
               </div>
             </div>
             <div className="d-flex justify-content-around w-100 mt-3">
               <div className="logoBorder p-2">
-                <img
-                  src="./assets/img/icons/mysql.png"
-                  width="100"
-                  className="img-fluid"
-                  alt="bootstrap"
-                />
+                <div>
+                  <img
+                    src="./assets/img/icons/mysql.png"
+                    width="100"
+                    className="img-fluid"
+                    alt="bootstrap"
+                  />
+                </div>
+                <div className="text-center theme mt-1">Mysql</div>
               </div>
               <div className="logoBorder p-2">
-                <img
-                  src="./assets/img/icons/python.png"
-                  width="100"
-                  className="img-fluid"
-                  alt="react"
-                />
+                <div>
+                  <div>
+                    <img
+                      src="./assets/img/icons/python.png"
+                      width="100"
+                      className="img-fluid"
+                      alt="react"
+                    />
+                  </div>
+                  <div className="text-center theme mt-1">Python</div>
+                </div>
               </div>
               <div className="logoBorder p-2">
-                <img
-                  src="./assets/img/icons/java.png"
-                  width="100"
-                  className="img-fluid"
-                  alt="redux"
-                />
+                <div>
+                  <img
+                    src="./assets/img/icons/java.png"
+                    width="100"
+                    className="img-fluid"
+                    alt="redux"
+                  />
+                </div>
+                <div className="text-center theme mt-1">Java</div>
               </div>
             </div>
           </div>

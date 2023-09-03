@@ -17,11 +17,10 @@ const Resume = () => {
                 <em>Addis Ababa Institute of Technology , Addis Ababa University</em>
               </p>
               <p>
-                Studying Electrical and Computer Engineering (ECE) at Addis Ababa Institute of
-                Technology (AAIT), Addis Ababa University (AAU), has prepared me to pursue a career
-                in this constantly evolving and impactful field. With a strong foundation in both
-                electrical engineering and computer engineering, I am equipped to tackle real-world
-                problems and contribute to technological advancements.
+                Studying Computer Engineering at Addis Ababa University (AAU) has prepared me to
+                pursue a career in this constantly evolving and impactful field. With a strong
+                foundation in computer engineering, I am equipped to tackle real-world problems and
+                contribute to technological advancements, with a focus on programming.
               </p>
             </div>
           </div>
