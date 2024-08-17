@@ -55,14 +55,11 @@ const Resume = () => {
             </div>
 
             <div className="resume-item">
-              <h4>Software developer , Minnovation </h4>
-              <h5>Apr 2023 - Aug 2023</h5>
+              <h4>Software developer , Addis Ababa University project team </h4>
+              <h5>Sep 2023 - Jan 2024</h5>
               <p>
-                Successfully executed and managed software projects independently. Designed,
-                developed, and implemented software applications from concept to completion. Ensured
-                high-quality deliverables through rigorous testing and debugging. Maintained a
-                self-driven approach, meeting project milestones and deadlines effectively.
-              </p>
+               Successfully led and managed the development of a comprehensive software solution for the Institute of Foreign Affairs. Oversaw the end-to-end design, development, and implementation of software applications, utilizing Jira for project management and Angular and .NET for development. 
+             </p>
             </div>
           </div>
         </div>
