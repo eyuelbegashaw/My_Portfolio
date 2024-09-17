@@ -5,7 +5,7 @@ const Home = () => {
         <div>
           <div>
             <h1>
-              Hi , I'm <span className="theme">Eyuel Begashaw</span>
+              Hi , My name is <span className="theme">Eyuel Begashaw</span>
             </h1>
             <h4>
               I'm a passionate <span>web developer</span>
@@ -23,14 +23,22 @@ const Home = () => {
             >
               <i className="bi bi-linkedin"></i>
             </a>
-            <a href="https://github.com/eyuelbegashaw" target="_blank" className="github">
+            <a
+              href="https://github.com/eyuelbegashaw"
+              target="_blank"
+              className="github"
+            >
               <i className="bi bi-github"></i>
             </a>
           </div>
         </div>
       </div>
       <div>
-        <img src="./assets/img/homepage.png" className="img-fluid homeImage" alt="" />
+        <img
+          src="./assets/img/homepage.png"
+          className="img-fluid homeImage"
+          alt=""
+        />
       </div>
     </section>
   );
