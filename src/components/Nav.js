@@ -57,8 +57,8 @@ const Nav = () => {
   return (
     <header id="header" className="header-top">
       <div className="container-sm d-flex justify-content-between align-items-center">
-        <a href="#home" className="mr-auto">
-          <img src="./assets/img/logo.png" alt="" width="100" />
+        <a href="#home" className="mr-auto" aria-label="Go to home section">
+          <img src="./assets/img/logo.png" alt="Eyuel Begashaw Portfolio Logo" width="100" loading="lazy" />
         </a>
 
         <nav id="navbar" className={`navbar ${navOpen ? "navbar-mobile" : ""}`}>
@@ -143,6 +143,14 @@ const Nav = () => {
           <i
             className="bi bi-list mobile-nav-toggle align-self-center me-5"
             onClick={handleMenuClick}
+            role="button"
+            aria-label="Toggle mobile navigation menu"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                handleMenuClick();
+              }
+            }}
           ></i>
         </nav>
       </div>

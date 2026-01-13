@@ -1,6 +1,8 @@
+import SkillsProgress from "./SkillsProgress";
+
 const About = () => {
   return (
-    <section id="about" className="about">
+    <section id="about" className="about fade-in">
       <div className="about-me container">
         <div className="section-title">
           <h2>About</h2>
@@ -9,7 +11,7 @@ const About = () => {
 
         <div className="row">
           <div className="col-lg-4" data-aos="fade-right">
-            <img src="./assets/img/me.jpg" className="img-fluid" alt="profile image" />
+            <img src="./assets/img/me.jpg" className="img-fluid" alt="Eyuel Begashaw - Web Developer" />
           </div>
           <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
             <h3>Website &amp; Mobile Developer</h3>
@@ -20,7 +22,7 @@ const About = () => {
                   <li>
                     <i className="bi bi-chevron-right"></i> <strong>Website:</strong>{" "}
                     <span>
-                      <a href="https://eyuel.onrender.com">https://eyuel.onrender.com</a>
+                      <a href="https://eyuel.onrender.com" target="_blank" rel="noopener noreferrer" aria-label="Visit portfolio website">https://eyuel.onrender.com</a>
                     </span>
                   </li>
                   <li>
@@ -56,14 +58,23 @@ const About = () => {
               create innovative solutions that have a positive impact on society.
             </p>
 
-            <div className="mt-4">
+            <div className="mt-4 d-flex gap-3 flex-wrap">
               <a
                 href="./assets/EyuelBegashawResume.pdf"
                 download
                 target="_blank"
-                class="bg-dark download text-white p-3"
+                rel="noopener noreferrer"
+                className="cta-button"
+                aria-label="Download resume PDF"
               >
-                Download Resume
+                <i className="bi bi-download me-2"></i>Download Resume
+              </a>
+              <a
+                href="#contact"
+                className="cta-button secondary"
+                aria-label="Get in touch"
+              >
+                <i className="bi bi-envelope me-2"></i>Let's Talk
               </a>
             </div>
           </div>
@@ -77,6 +88,11 @@ const About = () => {
 
         <div className="d-md-flex mt-4">
           <div className="flex-fill">
+            <h4 className="mb-4 text-center">Technologies I Work With</h4>
+          </div>
+        </div>
+        <div className="d-md-flex mt-4">
+          <div className="flex-fill">
             <div className="d-flex justify-content-around">
               <div className="logoBorder p-2">
                 <div>
@@ -84,7 +100,8 @@ const About = () => {
                     src="./assets/img/icons/html.png"
                     className="img-fluid"
                     width="100"
-                    alt="html"
+                    alt="HTML5 logo"
+                    loading="lazy"
                   />
                 </div>
                 <div className="text-center theme mt-1">HTML</div>
@@ -95,7 +112,8 @@ const About = () => {
                     src="./assets/img/icons/css.png"
                     className="img-fluid"
                     width="100"
-                    alt="css"
+                    alt="CSS3 logo"
+                    loading="lazy"
                   />
                 </div>
                 <div className="text-center theme mt-1">CSS</div>
@@ -106,7 +124,8 @@ const About = () => {
                     src="./assets/img/icons/js.png"
                     className="img-fluid"
                     width="100"
-                    alt="javascript"
+                    alt="JavaScript logo"
+                    loading="lazy"
                   />
                 </div>
                 <div className="text-center theme mt-1">JavaScript</div>
@@ -119,7 +138,8 @@ const About = () => {
                     src="./assets/img/icons/bootstrap.png"
                     width="100"
                     className="img-fluid"
-                    alt="bootstrap"
+                    alt="Bootstrap framework logo"
+                    loading="lazy"
                   />
                 </div>
                 <div className="text-center theme mt-1">Bootstrap</div>
@@ -130,7 +150,8 @@ const About = () => {
                     src="./assets/img/icons/react.png"
                     width="100"
                     className="img-fluid"
-                    alt="react"
+                    alt="React.js logo"
+                    loading="lazy"
                   />
                 </div>
                 <div className="text-center theme mt-1">React</div>
@@ -141,7 +162,8 @@ const About = () => {
                     src="./assets/img/icons/redux.png"
                     width="100"
                     className="img-fluid"
-                    alt="redux"
+                    alt="Redux logo"
+                    loading="lazy"
                   />
                 </div>
                 <div className="text-center theme mt-1">Redux</div>
@@ -156,7 +178,8 @@ const About = () => {
                     src="./assets/img/icons/nodejs.png"
                     className="img-fluid"
                     width="100"
-                    alt="html"
+                    alt="Node.js logo"
+                    loading="lazy"
                   />
                 </div>
                 <div className="text-center theme mt-1">Nodejs</div>
@@ -167,7 +190,8 @@ const About = () => {
                     src="./assets/img/icons/express.png"
                     className="img-fluid"
                     width="100"
-                    alt="css"
+                    alt="Express.js logo"
+                    loading="lazy"
                   />
                 </div>
                 <div className="text-center theme mt-1">Express</div>
@@ -178,7 +202,8 @@ const About = () => {
                     src="./assets/img/icons/mongodb.png"
                     className="img-fluid"
                     width="100"
-                    alt="javascript"
+                    alt="MongoDB logo"
+                    loading="lazy"
                   />
                 </div>
                 <div className="text-center theme mt-1">Mongodb</div>
@@ -191,7 +216,8 @@ const About = () => {
                     src="./assets/img/icons/mysql.png"
                     width="100"
                     className="img-fluid"
-                    alt="bootstrap"
+                    alt="MySQL logo"
+                    loading="lazy"
                   />
                 </div>
                 <div className="text-center theme mt-1">Mysql</div>
@@ -203,7 +229,8 @@ const About = () => {
                       src="./assets/img/icons/python.png"
                       width="100"
                       className="img-fluid"
-                      alt="react"
+                      alt="Python logo"
+                      loading="lazy"
                     />
                   </div>
                   <div className="text-center theme mt-1">Python</div>
@@ -215,13 +242,19 @@ const About = () => {
                     src="./assets/img/icons/java.png"
                     width="100"
                     className="img-fluid"
-                    alt="redux"
+                    alt="Java logo"
+                    loading="lazy"
                   />
                 </div>
                 <div className="text-center theme mt-1">Java</div>
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="mt-5">
+          <h4 className="mb-4 text-center">Skill Proficiency</h4>
+          <SkillsProgress />
         </div>
       </div>
 
@@ -233,13 +266,14 @@ const About = () => {
         <div className="row">
           <div className="col-lg-3 col-md-4 mt-2">
             <div className="icon-box d-flex">
-              <img
-                src="./assets/img/icons/football.png"
-                className="img-fluid pe-2"
-                width="40"
-                alt="javascript"
-              />
-              <h3>Football</h3>
+              <i className="bi bi-code-slash pe-2 theme" style={{ fontSize: "32px" }}></i>
+              <h3>Open Source</h3>
+            </div>
+          </div>
+          <div className="col-lg-3 col-md-4 mt-2">
+            <div className="icon-box d-flex">
+              <i className="bi bi-book pe-2 theme" style={{ fontSize: "32px" }}></i>
+              <h3>Reading</h3>
             </div>
           </div>
           <div className="col-lg-3 col-md-4 mt-2">
@@ -248,9 +282,16 @@ const About = () => {
                 src="./assets/img/icons/chess.png"
                 className="img-fluid pe-2"
                 width="40"
-                alt="javascript"
+                alt="Chess icon"
+                loading="lazy"
               />
               <h3>Chess</h3>
+            </div>
+          </div>
+          <div className="col-lg-3 col-md-4 mt-2">
+            <div className="icon-box d-flex">
+              <i className="bi bi-controller pe-2 theme" style={{ fontSize: "32px" }}></i>
+              <h3>Gaming</h3>
             </div>
           </div>
           <div className="col-lg-3 col-md-4 mt-2">
@@ -259,20 +300,28 @@ const About = () => {
                 src="./assets/img/icons/music.png"
                 className="img-fluid pe-2"
                 width="40"
-                alt="javascript"
+                alt="Music icon"
+                loading="lazy"
               />
               <h3>Music</h3>
             </div>
           </div>
           <div className="col-lg-3 col-md-4 mt-2">
             <div className="icon-box d-flex">
-              <img
-                src="./assets/img/icons/travelling.png"
-                className="img-fluid pe-2"
-                width="40"
-                alt="javascript"
-              />
-              <h3>Travelling</h3>
+              <i className="bi bi-camera pe-2 theme" style={{ fontSize: "32px" }}></i>
+              <h3>Photography</h3>
+            </div>
+          </div>
+          <div className="col-lg-3 col-md-4 mt-2">
+            <div className="icon-box d-flex">
+              <i className="bi bi-lightbulb pe-2 theme" style={{ fontSize: "32px" }}></i>
+              <h3>Tech Podcasts</h3>
+            </div>
+          </div>
+          <div className="col-lg-3 col-md-4 mt-2">
+            <div className="icon-box d-flex">
+              <i className="bi bi-trophy pe-2 theme" style={{ fontSize: "32px" }}></i>
+              <h3>Hackathons</h3>
             </div>
           </div>
         </div>
