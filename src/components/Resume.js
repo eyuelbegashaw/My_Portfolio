@@ -1,3 +1,51 @@
+const experiences = [
+  {
+    title: "Software Engineer",
+    company: "Williams Stanley and Co",
+    date: "Jul 2025 - Present",
+    location: "Remote (London, UK)",
+    description:
+      "Built production integration platforms connecting financial and till systems at scale. Designed and maintained backend APIs and Temporal workflows with FastAPI and PostgreSQL for authentication, data syncing, and reliable background processing across accounting and POS integrations such as Xero, NetSuite, Square, and Lightspeed. Delivered end-to-end features in Next.js and TypeScript spanning organisations, access control, integrations management, automations, and payment operations, wiring production UI to backend APIs and workflow orchestration.",
+    technologies: ["Python", "FastAPI", "PostgreSQL", "Temporal", "Next.js", "TypeScript"],
+  },
+  {
+    title: "Freelance Software Engineer",
+    company: "Upwork, DataAnnotation, Outlier",
+    date: "Mar 2025 - Jul 2025",
+    location: "Remote",
+    description:
+      "Worked on software development projects through Upwork, contributing to application development and backend functionality. Also worked with DataAnnotation and Outlier on AI training tasks to improve AI models by reviewing AI-generated code, identifying programming errors, and providing feedback on code quality. In addition, developed software solutions for local and international clients, tailoring applications to their technical requirements.",
+    technologies: ["Backend Development", "Code Review", "Debugging", "AI Training"],
+  },
+  {
+    title: "Software Engineer",
+    company: "Bank of Abyssinia",
+    date: "Dec 2023 - Feb 2025",
+    location: "Addis Ababa, Ethiopia",
+    description:
+      "Worked with the BASE24 payment processing system, supporting transaction processing and system integration, with additional exposure to T24 core banking. Developed backend services and RESTful APIs using Node.js, implementing business logic, database interactions, and API integrations to support banking applications. Contributed to backend architecture, system reliability, and the development of secure, efficient, and maintainable software solutions.",
+    technologies: ["Node.js", "REST APIs", "BASE24", "T24", "SQL"],
+  },
+  {
+    title: "Software Developer",
+    company: "Super Consult (Addis Ababa University)",
+    date: "Sep 2023 - Aug 2024",
+    location: "Addis Ababa, Ethiopia",
+    description:
+      "Contributed to the development of software solutions for the Institute of Foreign Affairs of Ethiopia (IFA), including the Integrated Research Management System (IRMS) and other projects. Developed frontend interfaces and backend functionality using AngularJS and .NET, helping build responsive, functional, and user-friendly web applications.",
+    technologies: ["AngularJS", ".NET", "C#", "SQL Server"],
+  },
+  {
+    title: "Web Developer",
+    company: "Tohey Technologies PLC",
+    date: "Mar 2022 - Jul 2022",
+    location: "Addis Ababa, Ethiopia",
+    description:
+      "Contributed to the development of multiple ERP systems using React, building responsive user interfaces and reusable components for modules such as inventory, sales and HR. Integrated frontend features with backend REST APIs and implemented forms, data tables and dashboards. Collaborated with designers and backend developers in an agile team to deliver user-friendly solutions on schedule.",
+    technologies: ["React", "JavaScript", "REST APIs", "CSS3"],
+  },
+];
+
 const Resume = () => {
   return (
     <section id="resume" className="resume fade-in">
@@ -8,6 +56,42 @@ const Resume = () => {
         </div>
 
         <div className="resume-timeline">
+          {experiences.map((job) => (
+            <div key={`${job.company}-${job.date}`} className="timeline-item experience-item">
+              <div className="timeline-marker experience-marker">
+                <i className="bi bi-briefcase-fill"></i>
+              </div>
+              <div className="timeline-content">
+                <div className="timeline-card">
+                  <div className="timeline-card-header">
+                    <div className="timeline-card-icon experience-icon">
+                      <i className="bi bi-briefcase-fill"></i>
+                    </div>
+                    <div className="timeline-card-title-group">
+                      <h4>
+                        {job.title}, {job.company}
+                      </h4>
+                      <span className="timeline-badge experience-badge">Experience</span>
+                    </div>
+                  </div>
+                  <div className="timeline-card-date">
+                    {job.date} | {job.location}
+                  </div>
+                  <div className="timeline-card-body">
+                    <p>{job.description}</p>
+                    <div className="resume-tech-tags">
+                      {job.technologies.map((tech) => (
+                        <span key={tech} className="resume-tech-tag">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+
           {/* Education */}
           <div className="timeline-item education-item">
             <div className="timeline-marker education-marker">
@@ -20,135 +104,21 @@ const Resume = () => {
                     <i className="bi bi-book-fill"></i>
                   </div>
                   <div className="timeline-card-title-group">
-                    <h4>B.Sc in Computer Engineering</h4>
+                    <h4>BSc Computer Engineering</h4>
                     <span className="timeline-badge education-badge">Education</span>
                   </div>
                 </div>
-                <div className="timeline-card-date">2018 - 2023</div>
+                <div className="timeline-card-date">Sep 2018 - Jul 2023 | Addis Ababa, Ethiopia</div>
                 <div className="timeline-card-body">
                   <p className="timeline-card-institution">
-                    <em>Addis Ababa Institute of Technology, Addis Ababa University</em>
+                    <em>Addis Ababa University</em>
                   </p>
                   <p>
-                    My education in Computer Engineering at Addis Ababa University (AAU) has prepared me
-                    for a career in this dynamic field. I'm particularly passionate about programming
-                    and software development. AAU's rigorous curriculum has given me a strong foundation
-                    to address real-world challenges and contribute to technological advancements, all
-                    while focusing on my passion for coding.
+                    Graduated with Great Distinction in Computer Engineering, achieving a CGPA of
+                    3.62/4.00 and an exit examination score of 88/100. Built a strong foundation in
+                    software engineering, programming, data structures and algorithms, database
+                    management, and system design.
                   </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Experience 1 */}
-          <div className="timeline-item experience-item">
-            <div className="timeline-marker experience-marker">
-              <i className="bi bi-briefcase-fill"></i>
-            </div>
-            <div className="timeline-content">
-              <div className="timeline-card">
-                <div className="timeline-card-header">
-                  <div className="timeline-card-icon experience-icon">
-                    <i className="bi bi-briefcase-fill"></i>
-                  </div>
-                  <div className="timeline-card-title-group">
-                    <h4>Software Developer, Bank of Abyssinia</h4>
-                    <span className="timeline-badge experience-badge">Experience</span>
-                  </div>
-                </div>
-                <div className="timeline-card-date">Jan 2024 - Jan 2025</div>
-                <div className="timeline-card-body">
-                  <p>
-                    Developed and maintained software solutions for banking operations. Collaborated with cross-functional teams to design, implement, and deploy applications that enhance banking services and improve operational efficiency.
-                  </p>
-                  <div className="resume-tech-tags">
-                    <span className="resume-tech-tag">Java</span>
-                    <span className="resume-tech-tag">React</span>
-                    <span className="resume-tech-tag">Python REST API</span>
-                    <span className="resume-tech-tag">MySQL</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Experience 2 */}
-          <div className="timeline-item experience-item">
-            <div className="timeline-marker experience-marker">
-              <i className="bi bi-briefcase-fill"></i>
-            </div>
-            <div className="timeline-content">
-              <div className="timeline-card">
-                <div className="timeline-card-header">
-                  <div className="timeline-card-icon experience-icon">
-                    <i className="bi bi-briefcase-fill"></i>
-                  </div>
-                  <div className="timeline-card-title-group">
-                    <h4>Full Stack Developer, Addis Ababa University Project Team</h4>
-                    <span className="timeline-badge experience-badge">Experience</span>
-                  </div>
-                </div>
-                <div className="timeline-card-date">Sep 2023 - Jan 2024</div>
-                <div className="timeline-card-body">
-                  <p>
-                    Successfully led and managed the development of a comprehensive software solution for the Institute of Foreign Affairs. Oversaw the end-to-end design, development, and implementation of software applications, utilizing Jira for project management and Angular and .NET for development.
-                  </p>
-                  <div className="resume-tech-tags">
-                    <span className="resume-tech-tag">Angular</span>
-                    <span className="resume-tech-tag">.NET</span>
-                    <span className="resume-tech-tag">Jira</span>
-                    <span className="resume-tech-tag">SQL Server</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Experience 3 */}
-          <div className="timeline-item experience-item">
-            <div className="timeline-marker experience-marker">
-              <i className="bi bi-briefcase-fill"></i>
-            </div>
-            <div className="timeline-content">
-              <div className="timeline-card">
-                <div className="timeline-card-header">
-                  <div className="timeline-card-icon experience-icon">
-                    <i className="bi bi-briefcase-fill"></i>
-                  </div>
-                  <div className="timeline-card-title-group">
-                    <h4>Website Developer, Tohey Technologies PLC</h4>
-                    <span className="timeline-badge experience-badge">Experience</span>
-                  </div>
-                </div>
-                <div className="timeline-card-date">April 2022 - July 2022</div>
-                <div className="timeline-card-body">
-                  <p>
-                    Worked as a website developer for Tohey Technologies, an Addis Ababa-based company,
-                    for four months. Collaborated with a team to develop and maintain websites using
-                    various technologies. As part of this role, I also:
-                  </p>
-                  <ul className="resume-card-list">
-                    <li>Designed and developed a fully functional website from scratch</li>
-                    <li>
-                      Collaborated with a team of designers and developers to ensure timely delivery
-                      of the website.
-                    </li>
-                    <li>
-                      Utilized React components and libraries to streamline the development process
-                      and improve website functionality.
-                    </li>
-                    <li>
-                      Implemented responsive design techniques to ensure the website was optimized for
-                      viewing on different devices.
-                    </li>
-                  </ul>
-                  <div className="resume-tech-tags">
-                    <span className="resume-tech-tag">React</span>
-                    <span className="resume-tech-tag">JavaScript</span>
-                    <span className="resume-tech-tag">CSS3</span>
-                    <span className="resume-tech-tag">Bootstrap</span>
-                  </div>
                 </div>
               </div>
             </div>

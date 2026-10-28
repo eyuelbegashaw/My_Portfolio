@@ -8,41 +8,39 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [subject, setSubject] = useState("");
 
-  const handleClick = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     if (isSubmitting) return; // Prevent duplicate submissions
-    
+
     try {
-      if (email && subject && message) {
-        setIsSubmitting(true);
-        setFlag("loading");
-        const response = await fetch("https://formspree.io/f/mrgvobby", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            email,
-            message: `Subject : ${subject}
-                      ${message}
-                      `,
-          }),
-        });
-        if (response.ok) {
-          setFlag("success");
-          // Clear form fields after successful submission
-          setEmail("");
-          setSubject("");
-          setMessage("");
-          setIsSubmitting(false);
-          setTimeout(() => setFlag(""), 5000);
-        } else {
-          setFlag("failure");
-          setIsSubmitting(false);
-        }
+      setIsSubmitting(true);
+      setFlag("loading");
+      const response = await fetch("https://formspree.io/f/mrgvobby", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          _subject: subject,
+          message: `Subject: ${subject}\n\n${message}`,
+        }),
+      });
+      if (response.ok) {
+        setFlag("success");
+        // Clear form fields after successful submission
+        setEmail("");
+        setSubject("");
+        setMessage("");
+        setTimeout(() => setFlag(""), 5000);
+      } else {
+        setFlag("failure");
       }
     } catch (error) {
       console.log(error);
       setFlag("failure");
+    } finally {
       setIsSubmitting(false);
     }
   };
@@ -69,7 +67,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="php-email-form mt-4">
+        <form className="php-email-form mt-4" onSubmit={handleSubmit}>
           <div className="mb-3">
             {flag === "loading" && (
               <div className="d-flex justify-content-center">
@@ -130,38 +128,48 @@ const Contact = () => {
           </div>
 
           <div className="text-center">
-            <button 
-              className="btn bgtheme text-light w-100 mt-2" 
-              onClick={handleClick}
+            <button
+              type="submit"
+              className="btn bgtheme text-light w-100 mt-2"
               disabled={isSubmitting}
               aria-label="Send message"
             >
               {isSubmitting ? "Sending..." : "Send Message"}
             </button>
           </div>
-        </div>
+        </form>
       </div>
 
       <div className="cta-section fade-in">
         <div className="container">
-          <h2>Let's Work Together!</h2>
-          <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your team.</p>
-          <div className="d-flex gap-3 justify-content-center flex-wrap">
-            <a href="mailto:eyuelbegashaw214@gmail.com" className="cta-button">
-              <i className="bi bi-envelope me-2"></i>Send Email
-            </a>
-            <a href="tel:+251922002403" className="cta-button secondary">
-              <i className="bi bi-telephone me-2"></i>Call Me
-            </a>
-            <a
-              href="./assets/EyuelBegashawResume.pdf"
-              download
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cta-button secondary"
-            >
-              <i className="bi bi-file-earmark-pdf me-2"></i>Download Resume
-            </a>
+          <div className="cta-card">
+            <span className="cta-eyebrow">
+              <span className="cta-status-dot"></span>Open to new opportunities
+            </span>
+            <h2>Let's Work Together</h2>
+            <p>
+              I'm always open to discussing new projects, product ideas, or opportunities to be
+              part of your team.
+            </p>
+            <div className="cta-actions">
+              <a href="mailto:eyuelbegashaw214@gmail.com" className="cta-button">
+                <i className="bi bi-envelope me-2"></i>Send Email
+              </a>
+              <a href="tel:+251922002403" className="cta-button secondary">
+                <i className="bi bi-telephone me-2"></i>Call Me
+              </a>
+            </div>
+            <div className="cta-details">
+              <span>
+                <i className="bi bi-envelope"></i>eyuelbegashaw214@gmail.com
+              </span>
+              <span>
+                <i className="bi bi-telephone"></i>+251922002403
+              </span>
+              <span>
+                <i className="bi bi-geo-alt"></i>Addis Ababa, Ethiopia
+              </span>
+            </div>
           </div>
         </div>
       </div>

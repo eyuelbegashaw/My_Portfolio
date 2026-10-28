@@ -1,4 +1,45 @@
-import SkillsProgress from "./SkillsProgress";
+const skillGroups = [
+  {
+    name: "Languages",
+    icon: "bi-code-slash",
+    skills: ["Python", "TypeScript", "JavaScript", "C#", "Java"],
+  },
+  {
+    name: "Frontend",
+    icon: "bi-window",
+    skills: ["Next.js", "React", "AngularJS", "Tailwind CSS", "SSR"],
+  },
+  {
+    name: "Backend",
+    icon: "bi-server",
+    skills: ["FastAPI", "Node.js", "Express", ".NET", "REST APIs", "Temporal", "Async jobs"],
+  },
+  {
+    name: "Databases",
+    icon: "bi-database",
+    skills: ["PostgreSQL", "SQL", "MongoDB", "SQLAlchemy", "Alembic", "Mongoose", "Redis"],
+  },
+  {
+    name: "Cloud & DevOps",
+    icon: "bi-cloud",
+    skills: ["Docker", "AWS", "GitHub Actions", "CI/CD", "Git", "Linux"],
+  },
+  {
+    name: "Testing",
+    icon: "bi-check2-circle",
+    skills: ["pytest", "Jest", "Playwright", "Unit testing", "E2E testing"],
+  },
+  {
+    name: "Integrations & Fintech",
+    icon: "bi-plug",
+    skills: ["Xero", "NetSuite", "Square", "Lightspeed", "OAuth 2.0", "Webhooks", "Data syncing", "BASE24"],
+  },
+  {
+    name: "AI",
+    icon: "bi-stars",
+    skills: ["Cursor", "Claude Code", "GitHub Copilot", "OpenAI API", "Anthropic API", "Prompt engineering"],
+  },
+];
 
 const About = () => {
   return (
@@ -11,10 +52,10 @@ const About = () => {
 
         <div className="row">
           <div className="col-lg-4" data-aos="fade-right">
-            <img src="./assets/img/me.jpg" className="img-fluid" alt="Eyuel Begashaw - Web Developer" />
+            <img src="./assets/img/me.jpg" className="img-fluid" alt="Eyuel Begashaw - Software Engineer" />
           </div>
           <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Website &amp; Mobile Developer</h3>
+            <h3>Software Engineer</h3>
             <p className="ps-1">Hi there👋</p>
             <div className="row">
               <div className="col-lg-6">
@@ -39,39 +80,33 @@ const About = () => {
                 <ul>
                   <li>
                     <i className="bi bi-chevron-right"></i> <strong>Degree:</strong>
-                    <span>Computer Engineering</span>
+                    <span>BSc Computer Engineering</span>
                   </li>
                   <li>
                     <i className="bi bi-chevron-right"></i> <strong>Email:</strong>
                     <span>eyuelbegashaw214@gmail.com</span>
                   </li>
+                  <li>
+                    <i className="bi bi-chevron-right"></i> <strong>Languages:</strong>
+                    <span>English (Fluent), Amharic (Native)</span>
+                  </li>
                 </ul>
               </div>
             </div>
             <p>
-              I am a computer engineer graduated from Addis Ababa University, with a strong passion
-              for programming. I am constantly seeking to expand my knowledge and skills in the
-              field, and I am always eager to take on new challenges that will help me grow as a
-              developer. I have gained practical experience working on a variety of programming
-              projects. In my free time, I love exploring new technologies, experimenting with code,
-              and collaborating with other programmers. Ultimately, I hope to use my skills to
-              create innovative solutions that have a positive impact on society.
+              Software Engineer with 3+ years of experience building production-grade web
+              applications, backend services and system integrations. Delivered projects across
+              fintech, banking, ERP and research management platforms, working with technologies
+              such as Python, FastAPI, Node.js, TypeScript, React, Next.js, .NET and PostgreSQL.
+              Experienced in payment processing, workflow orchestration and scalable API design. A
+              proactive problem-solver and clear communicator who takes ownership of features end
+              to end and works well in remote, cross-functional teams.
             </p>
 
             <div className="mt-4 d-flex gap-3 flex-wrap">
               <a
-                href="./assets/EyuelBegashawResume.pdf"
-                download
-                target="_blank"
-                rel="noopener noreferrer"
-                className="cta-button"
-                aria-label="Download resume PDF"
-              >
-                <i className="bi bi-download me-2"></i>Download Resume
-              </a>
-              <a
                 href="#contact"
-                className="cta-button secondary"
+                className="cta-button"
                 aria-label="Get in touch"
               >
                 <i className="bi bi-envelope me-2"></i>Let's Talk
@@ -86,175 +121,24 @@ const About = () => {
           <h2>Skills</h2>
         </div>
 
-        <div className="d-md-flex mt-4">
-          <div className="flex-fill">
-            <h4 className="mb-4 text-center">Technologies I Work With</h4>
-          </div>
-        </div>
-        <div className="d-md-flex mt-4">
-          <div className="flex-fill">
-            <div className="d-flex justify-content-around">
-              <div className="logoBorder p-2">
-                <div>
-                  <img
-                    src="./assets/img/icons/html.png"
-                    className="img-fluid"
-                    width="100"
-                    alt="HTML5 logo"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="text-center theme mt-1">HTML</div>
+        <div className="skills-grid mt-4 fade-in">
+          {skillGroups.map((group) => (
+            <div key={group.name} className="skill-card">
+              <div className="skill-card-header">
+                <span className="skill-group-icon">
+                  <i className={`bi ${group.icon}`}></i>
+                </span>
+                <h4>{group.name}</h4>
               </div>
-              <div className="logoBorder p-2">
-                <div>
-                  <img
-                    src="./assets/img/icons/css.png"
-                    className="img-fluid"
-                    width="100"
-                    alt="CSS3 logo"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="text-center theme mt-1">CSS</div>
-              </div>
-              <div className="logoBorder p-2">
-                <div>
-                  <img
-                    src="./assets/img/icons/js.png"
-                    className="img-fluid"
-                    width="100"
-                    alt="JavaScript logo"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="text-center theme mt-1">JavaScript</div>
+              <div className="skill-chips">
+                {group.skills.map((skill) => (
+                  <span key={skill} className="skill-chip">
+                    {skill}
+                  </span>
+                ))}
               </div>
             </div>
-            <div className="d-flex justify-content-around w-100 mt-3">
-              <div className="logoBorder p-2">
-                <div>
-                  <img
-                    src="./assets/img/icons/bootstrap.png"
-                    width="100"
-                    className="img-fluid"
-                    alt="Bootstrap framework logo"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="text-center theme mt-1">Bootstrap</div>
-              </div>
-              <div className="logoBorder p-2">
-                <div>
-                  <img
-                    src="./assets/img/icons/react.png"
-                    width="100"
-                    className="img-fluid"
-                    alt="React.js logo"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="text-center theme mt-1">React</div>
-              </div>
-              <div className="logoBorder p-2">
-                <div>
-                  <img
-                    src="./assets/img/icons/redux.png"
-                    width="100"
-                    className="img-fluid"
-                    alt="Redux logo"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="text-center theme mt-1">Redux</div>
-              </div>
-            </div>
-          </div>
-          <div className="flex-fill">
-            <div className="d-flex justify-content-around">
-              <div className="logoBorder p-2">
-                <div>
-                  <img
-                    src="./assets/img/icons/nodejs.png"
-                    className="img-fluid"
-                    width="100"
-                    alt="Node.js logo"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="text-center theme mt-1">Nodejs</div>
-              </div>
-              <div className="logoBorder p-2">
-                <div>
-                  <img
-                    src="./assets/img/icons/express.png"
-                    className="img-fluid"
-                    width="100"
-                    alt="Express.js logo"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="text-center theme mt-1">Express</div>
-              </div>
-              <div className="logoBorder p-2">
-                <div>
-                  <img
-                    src="./assets/img/icons/mongodb.png"
-                    className="img-fluid"
-                    width="100"
-                    alt="MongoDB logo"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="text-center theme mt-1">Mongodb</div>
-              </div>
-            </div>
-            <div className="d-flex justify-content-around w-100 mt-3">
-              <div className="logoBorder p-2">
-                <div>
-                  <img
-                    src="./assets/img/icons/mysql.png"
-                    width="100"
-                    className="img-fluid"
-                    alt="MySQL logo"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="text-center theme mt-1">Mysql</div>
-              </div>
-              <div className="logoBorder p-2">
-                <div>
-                  <div>
-                    <img
-                      src="./assets/img/icons/python.png"
-                      width="100"
-                      className="img-fluid"
-                      alt="Python logo"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="text-center theme mt-1">Python</div>
-                </div>
-              </div>
-              <div className="logoBorder p-2">
-                <div>
-                  <img
-                    src="./assets/img/icons/java.png"
-                    width="100"
-                    className="img-fluid"
-                    alt="Java logo"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="text-center theme mt-1">Java</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-5">
-          <h4 className="mb-4 text-center">Skill Proficiency</h4>
-          <SkillsProgress />
+          ))}
         </div>
       </div>
 

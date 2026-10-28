@@ -6,6 +6,16 @@ const Portfolio = () => {
 
   const projects = [
     {
+      id: 4,
+      title: "Bar Management & POS System",
+      category: "Full Stack",
+      image: "./assets/img/portfolio/bar1.png",
+      images: ["./assets/img/portfolio/bar1.png"],
+      description: "A complete point-of-sale and management system built for bars and restaurants. Staff can sell drinks by category (beer, spirits, wine, soft drinks), search products, build a cart, and take payment by cash, bank transfer, or pay later. Beyond sales, the system manages open tabs, staff shifts and breaks, voided orders, products and stock levels, suppliers, other income and expenses, and staff accounts, with detailed reports for the owner. It supports role-based access for owners, admins, and staff, is fully bilingual in English and Amharic, and is built offline-first so sales are queued and synced automatically when the connection returns.",
+      technologies: ["React", "TypeScript", "Offline-first", "Role-based access", "English / Amharic"],
+      carouselId: "carouselBar",
+    },
+    {
       id: 1,
       title: "Ecommerce Website",
       category: "Full Stack",
@@ -18,7 +28,6 @@ const Portfolio = () => {
       ],
       description: "This website offers a simple and user-friendly online shopping experience, allowing you to easily customize your orders by choosing colors, quantities, and sizes. When you pick a color from the dropdown menu, you'll see an image of the product in that color, making it easier to decide. Additionally, the website gives the admin complete control over the products and categories, making management and organization effortless.",
       technologies: ["React", "Node.js", "MongoDB", "Express", "Bootstrap"],
-      liveUrl: "https://hasetshop.com",
       carouselId: "carouselEcommerce",
     },
     {
@@ -31,22 +40,7 @@ const Portfolio = () => {
       ),
       description: "This private website, built on the MERN stack, provides a comprehensive set of advanced features to manage and sell pharmaceutical products. In addition to drug sales, registration, and daily transaction management, the platform notifies users of low quantity and expired drugs and includes print functionality for receipts and transactions. The administrator has complete control over the system and can manage drug suppliers, categorize drugs, and update pharmacist data.",
       technologies: ["React", "Node.js", "MongoDB", "Express", "Redux", "JWT"],
-      liveUrl: "https://benetpharmacy.onrender.com",
       carouselId: "carouselPharmacy",
-    },
-    {
-      id: 3,
-      title: "Quiz Platform",
-      category: "Frontend",
-      image: "./assets/img/portfolio/fetena1.jpg",
-      images: [
-        "./assets/img/portfolio/fetena1.jpg",
-        "./assets/img/portfolio/fetena2.jpg",
-      ],
-      description: "This quiz platform offers users the ability to select from over 20 categories, customize the difficulty level, and choose the number of questions. It provides an enjoyable and interactive way to test knowledge across a range of subjects.",
-      technologies: ["React", "JavaScript", "CSS3", "API"],
-      liveUrl: "https://fetena.netlify.app/",
-      carouselId: "carouselExampleControls2",
     },
   ];
 
@@ -64,6 +58,7 @@ const Portfolio = () => {
         <div className="section-title">
           <h2>Portfolio</h2>
           <h1 className="fs-1 fw-bold">Some Of My Works</h1>
+          <p className="section-subtitle">Personal projects available for demo.</p>
         </div>
 
         {/* Portfolio Grid */}
@@ -98,14 +93,8 @@ const Portfolio = () => {
                   )}
                 </div>
                 <div className="portfolio-card-footer">
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="portfolio-card-link"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <i className="bi bi-box-arrow-up-right me-2"></i>Live Demo
+                  <a href="#contact" className="portfolio-card-link">
+                    <i className="bi bi-calendar-check me-2"></i>Book a Demo
                   </a>
                 </div>
               </div>
@@ -173,12 +162,11 @@ const Portfolio = () => {
                     </div>
                     <div className="project-links mb-3">
                       <a
-                        href={selectedProject.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="#contact"
                         className="project-link-btn"
+                        onClick={closeProjectModal}
                       >
-                        <i className="bi bi-box-arrow-up-right me-2"></i>Live Demo
+                        <i className="bi bi-calendar-check me-2"></i>Book a Demo
                       </a>
                     </div>
                     <p className="project-description">{selectedProject.description}</p>

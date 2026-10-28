@@ -72,7 +72,7 @@ const Statistics = () => {
               <div className="stat-icon">
                 <i className="bi bi-briefcase"></i>
               </div>
-              <Counter end={15} suffix="+" />
+              <Counter end={30} suffix="+" />
               <p>Projects Completed</p>
             </div>
           </div>

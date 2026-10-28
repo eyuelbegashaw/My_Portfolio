@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const Home = () => {
   const [displayText, setDisplayText] = useState("");
-  const fullText = "web developer";
+  const fullText = "software engineer";
   const [isDeleting, setIsDeleting] = useState(false);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
@@ -44,8 +44,8 @@ const Home = () => {
               <span className="typing-cursor">|</span>
             </h4>
             <p className="value-proposition mt-3">
-              I transform ideas into powerful web applications. Specializing in full-stack development 
-              with React, Node.js, and modern databases. Let's build something amazing together!
+              I build production-grade web applications, backend services and system integrations
+              across fintech, banking and ERP platforms. Let's build something reliable together!
             </p>
           </div>
 
@@ -93,7 +93,7 @@ const Home = () => {
         <img
           src="./assets/img/homepage.png"
           className="img-fluid homeImage"
-          alt="Eyuel Begashaw - Web Developer Portfolio"
+          alt="Eyuel Begashaw - Software Engineer Portfolio"
           loading="lazy"
         />
       </div>
