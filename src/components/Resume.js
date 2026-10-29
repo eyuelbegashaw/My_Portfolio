@@ -114,8 +114,8 @@ const Resume = () => {
                     <em>Addis Ababa University</em>
                   </p>
                   <p>
-                    Graduated with Great Distinction in Computer Engineering, achieving a CGPA of
-                    3.62/4.00 and an exit examination score of 88/100. Built a strong foundation in
+                    Graduated with Great Distinction in Computer Engineering and passed the national
+                    exit examination with an excellent score. Built a strong foundation in
                     software engineering, programming, data structures and algorithms, database
                     management, and system design.
                   </p>
